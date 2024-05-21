@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { onErrorCaptured } from 'vue'
+import { onErrorCaptured, type SuspenseProps } from 'vue'
 import { RouterLink, RouterView } from 'vue-router/auto'
+
 
 onErrorCaptured((err, instance, info) => {
   console.error('erreur : ', err, '\ninfo : ', info, '\ncomposant : ', instance)
@@ -9,11 +10,15 @@ onErrorCaptured((err, instance, info) => {
 </script>
 
 <template>
+  
   <header>
     <nav>
       <ul>
         <li>
           <RouterLink to="/" class="text-red-500 underline"> Accueil </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/offres" class="text-blue-500 underline"> Offres </RouterLink>
         </li>
       </ul>
     </nav>
