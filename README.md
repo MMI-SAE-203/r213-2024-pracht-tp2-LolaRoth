@@ -157,7 +157,7 @@ Dans `/src/components/MaisonCard.vue` :
   import type { MaisonResponse } from '@/pocketbase-types'
   import ImgPb from './ImgPb.vue'
 
-  const props = defineProps<MaisonResponse>()
+  const props = defineProps<MaisonResponse<any>>()
 </script>
 <template>
   <div>

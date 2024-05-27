@@ -12,6 +12,6 @@ const maisonListe = await FavMaison
 </script>
 
 <template>
-  <MaisonCard v-for="maison in maisonsListe" v-bind="maison" :key="maison.id"/>
+  
 </template>
     

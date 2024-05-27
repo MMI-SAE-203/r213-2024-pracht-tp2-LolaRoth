@@ -47,7 +47,8 @@ export type MaisonRecord = {
 	NomMaison?: string
 	Surface?: number
 	adresse?: string
-	images?: string[]
+	agent?: RecordIdString
+	images?: string
 	nbChambres?: number
 	nbSdb?: number
 	prix?: number

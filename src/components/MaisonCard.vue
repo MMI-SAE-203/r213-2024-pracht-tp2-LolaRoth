@@ -1,16 +1,15 @@
 <script setup lang="ts">
-import type { MaisonRecord } from '@/pocketbase-types'
+import type { MaisonResponse } from '@/pocketbase-types'
 import ImgPb from './ImgPb.vue'
 
-defineProps <MaisonRecord>()
+const props=defineProps <MaisonResponse<any>>()
 </script>
 <template>
-  <div class="personne-card border-2 p-1">
-    <ImgPb :record="props" :filename="images" :width="387" :height="235" class="..." />
+  <!-- <div class="personne-card border-2 p-1">
     <p>nom : {{ NomMaison }}</p>
     <p>prix : {{ prix }}</p>
     <p>favori : {{ Favori ? 'oui' : 'non' }}</p>
-  </div>
+  </div> -->
   <div
   class="flex flex-col justify-start items-start self-stretch flex-grow-0 flex-shrink-0 relative rounded-lg bg-white border-[1.5px] border-indigo-100"
 >
@@ -18,8 +17,8 @@ defineProps <MaisonRecord>()
     <div
       class="w-[342px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
     ></div>
-    <img
-      src=""
+    <ImgPb :record="props" :filename="images" :width="387" :height="235" 
+
       class="w-[342px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover"
     />
   </div>

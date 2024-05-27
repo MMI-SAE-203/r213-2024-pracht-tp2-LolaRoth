@@ -7,12 +7,6 @@ import {FavMaison} from '@/backend';
 const maisonsListe = await pb.collection('Maison').getFullList();
 console.log(maisonsListe);
 
-try {
-    const favori = await allMaisonsSorted();
-    console.log(JSON.stringify(favori, null, 2));
-} catch (e) {
-    console.error(e);
-}
 
 </script>
 
